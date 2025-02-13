@@ -25,6 +25,7 @@ func (app *application) showMovieHandler(w http.ResponseWriter, r *http.Request)
 		ID:        id,
 		CreatedAt: time.Now(),
 		Title:     "Titanic",
+		Runtime:   130,
 		Year:      0,
 		Genres:    []string{"sexy dicaprio", "drama", "tragedy"},
 		Version:   1,
