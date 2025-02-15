@@ -1,6 +1,10 @@
 package data
 
-import "time"
+import (
+	"time"
+
+	"greenlight.brainwhat/internal/validator"
+)
 
 type Movie struct {
 	ID        int64     `json:"id"` // This just changes output names
@@ -10,4 +14,19 @@ type Movie struct {
 	Runtime   Runtime   `json:"runtime,omitempty"`
 	Genres    []string  `json:"genres,omitempty"`
 	Version   int32     `json:"version"`
+}
+
+func ValidateMovie(v *validator.Validator, movie *Movie) {
+	v.Check(movie.Title != "", "title", "title cannot be empty")
+	v.Check(len(movie.Title) < 500, "title", "title must be under 500 characters")
+
+	v.Check(movie.Year != 0, "year", "must provide year")
+	v.Check(movie.Year > 1888 && movie.Year <= int32(time.Now().Year()), "year", "incorrect year")
+
+	v.Check(movie.Runtime > 0, "runtime", "runtime must be a positive integer")
+
+	v.Check(movie.Genres != nil, "genres", "genres cannot be empty")
+	v.Check(validator.CheckForEmptyStrings(movie.Genres), "genres", "genres cannot be empty")
+	v.Check(len(movie.Genres) > 0 && len(movie.Genres) <= 5, "genres", "movie must have between 1 and 5 genres")
+	v.Check(validator.Unique(movie.Genres), "genres", "genres must be unique")
 }
