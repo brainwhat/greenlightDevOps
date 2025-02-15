@@ -41,3 +41,7 @@ func (app *application) methodNotAllowedError(w http.ResponseWriter, r *http.Req
 	message := fmt.Sprintf("the %s method is not allowed", r.Method)
 	app.errorResponse(w, r, http.StatusMethodNotAllowed, message)
 }
+
+func (app *application) badRequestReponse(w http.ResponseWriter, r *http.Request, err error) {
+	app.errorResponse(w, r, http.StatusBadRequest, err.Error())
+}
