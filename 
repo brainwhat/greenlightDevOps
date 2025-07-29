@@ -1,0 +1,77 @@
+[33mcommit 1d19d6a6888e826fa9214ab262281a8d36336218[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: brainwhat <facelessbeach@gmail.com>
+Date:   Sat Feb 15 22:05:04 2025 +0300
+
+    added json validation with validator package
+
+[33mcommit 23831bfd3d8d3350f60f3efbb085bfcc8e359690[m
+Author: brainwhat <facelessbeach@gmail.com>
+Date:   Sat Feb 15 20:46:24 2025 +0300
+
+    added custom json decoding for 'runtime' field
+
+[33mcommit 9d745e94c541c6c8e374962ce8c8450530a86258[m
+Author: brainwhat <facelessbeach@gmail.com>
+Date:   Sat Feb 15 13:47:12 2025 +0300
+
+    added: max size of req body; accepting only known json fields; accepting only one json object
+
+[33mcommit b2565790e11de77539d4f3d701688200e3de10ac[m
+Author: brainwhat <facelessbeach@gmail.com>
+Date:   Sat Feb 15 12:33:32 2025 +0300
+
+    added graceful error handling for reading JSON requests
+
+[33mcommit eca4cf6d4d76545263ccfa378881d6c5833e30fd[m
+Author: brainwhat <facelessbeach@gmail.com>
+Date:   Sat Feb 15 01:59:37 2025 +0300
+
+    added basic json request decoding
+
+[33mcommit be79db886320529eb6fb2032ece0df7fce5a1544[m
+Author: brainwhat <facelessbeach@gmail.com>
+Date:   Fri Feb 14 21:51:36 2025 +0300
+
+    added custom errors and panic recovery
+
+[33mcommit c18d51c81e6c40a25e067369484513febf52feda[m
+Author: brainwhat <facelessbeach@gmail.com>
+Date:   Fri Feb 14 01:04:26 2025 +0300
+
+    implemented custon MarshalJSON for the Runtime field
+
+[33mcommit 62504633b1c7cfeba5192ea4c697d59630a8296d[m
+Author: brainwhat <facelessbeach@gmail.com>
+Date:   Thu Feb 13 23:39:10 2025 +0300
+
+    added json formating and enveloping
+
+[33mcommit 82d2087eea04d05be3a22c75fa639d59f0bea34a[m
+Author: brainwhat <facelessbeach@gmail.com>
+Date:   Thu Feb 13 23:20:04 2025 +0300
+
+    added Movie struct that marshals into json response
+
+[33mcommit 6dbd58293f0a3333c07f256a27a567b6f1b1ac44[m
+Author: brainwhat <facelessbeach@gmail.com>
+Date:   Thu Feb 13 00:52:24 2025 +0300
+
+    changed fixed-format string json response to json encoding using json.Marshal()
+
+[33mcommit 37de7edf653302633b23790ac9e1cdc78a32a40e[m
+Author: brainwhat <facelessbeach@gmail.com>
+Date:   Wed Feb 12 23:47:51 2025 +0300
+
+    added fixed-format string json responses
+
+[33mcommit d88f3020c3f9b193547bc0d9ebc16c424128bcfd[m
+Author: brainwhat <facelessbeach@gmail.com>
+Date:   Wed Feb 12 23:16:40 2025 +0300
+
+    added httprouter package and basic handlers
+
+[33mcommit 481947411352fe14af7b91c474f968edf58bd8fe[m
+Author: brainwhat <facelessbeach@gmail.com>
+Date:   Wed Feb 12 00:29:53 2025 +0300
+
+    The beginning
